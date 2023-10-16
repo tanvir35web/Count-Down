@@ -4,6 +4,7 @@ let min = document.getElementById("min");
 let sec = document.getElementById("sec");
 
 var countDownDate = new Date("Nov 29, 2023 00:05:00").getTime();
+
 var x = setInterval(function(){
     var now = new Date().getTime();
     var distance = countDownDate - now;
@@ -19,3 +20,23 @@ var x = setInterval(function(){
     sec.innerHTML = (seconds  < 10 ? "0" : "") + seconds;
 
 }, 1000); 
+
+
+
+// For Dark / Light Mood Button Feature
+
+var btn = document.getElementById("btn");
+var hero = document.getElementById("hero");
+
+
+btn.onclick = function() {
+    hero.classList.toggle("dark-mood");
+
+    if (hero.classList.contains("dark-mood")){
+        btn.innerHTML = "Dark Mood";
+
+      } else {
+        btn.innerHTML = "Light Mood";
+
+}};
+          

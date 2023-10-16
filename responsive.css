@@ -73,5 +73,53 @@
         left: 105px;
         font-size: 15px;
     }
+
+    button {
+        font-size: 10px;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
+        border: 2px solid rgba(176, 0, 0, 0.905);
+        color: rgb(121, 0, 0);
+        border-radius: 50px;
+        cursor: none;
+        outline: none;
+        background: transparent;   
+        font-weight: 600;     
+    }
+    
+    
+    .dark-mood {
+        background-color: white;
+        color: rgb(45, 45, 45);
+
+        .container::before{
+            content: '';
+            width: 70px;
+            height: 70px;
+            background: #f4e21b;
+            border-radius: 50%;
+            position: absolute;
+            left: 20px;
+            top: -20px;
+            z-index: -1;
+        }
+        
+        .container::after{
+            content: '';
+            width: 70px;
+            height: 70px;
+            background: #ff3c3c;
+            border-radius: 50%;
+            position: absolute;
+            right: 20px;
+            bottom: -20px;
+            z-index: -1;
+        }
+    
+        
+    }
     
 }
