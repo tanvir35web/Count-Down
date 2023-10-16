@@ -1,13 +1,21 @@
+function startTimer(){
+
+
+
 let day = document.getElementById("day");
 let hr = document.getElementById("hr");
 let min = document.getElementById("min");
 let sec = document.getElementById("sec");
+let localTime = document.getElementById("input-date").value;
 
-var countDownDate = new Date("Nov 29, 2023 00:05:00").getTime();
+let milliSecond = Date.parse(localTime);
+
+console.log(milliSecond);
+
 
 var x = setInterval(function(){
     var now = new Date().getTime();
-    var distance = countDownDate - now;
+    var distance = milliSecond - now;
 
     var days = Math.floor( distance / (1000 * 60 * 60 * 24) );
     var hours = Math.floor( (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60) );
@@ -21,7 +29,7 @@ var x = setInterval(function(){
 
 }, 1000); 
 
-
+}
 
 // For Dark / Light Mood Button Feature
 
@@ -34,9 +42,14 @@ btn.onclick = function() {
 
     if (hero.classList.contains("dark-mood")){
         btn.innerHTML = "Dark Mood";
+        btn.style.color = 'black';
+        btn.style.border = '2px solid black';
 
       } else {
         btn.innerHTML = "Light Mood";
+        btn.style.color = 'white';
+        btn.style.border = '2px solid white';
 
 }};
+
           
