@@ -117,8 +117,8 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px 20px;
-    border: 2px solid rgba(176, 0, 0, 0.905);
-    color: rgb(121, 0, 0);
+    border: 2px solid rgba(255, 255, 255, 0.905);
+    color: rgb(255, 255, 255);
     border-radius: 50px;
     cursor: pointer;
     outline: none;
@@ -126,10 +126,57 @@ button {
     font-weight: 600;     
 }
 
+#setTime {
+    position: absolute;
+    bottom: 190%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+
+#input-date {
+    margin-top: 20px;
+    width: 310px;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    font-weight: 500;
+    border-radius: 50px;
+    outline: none;
+    border: 2px solid rgb(30, 30, 30);
+}
+
+#timeBtn {
+    position: absolute;
+    top: 150px;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 10px 30px;
+}
+
 
 .dark-mood {
     background-color: white;
     color: rgb(45, 45, 45);
+
+    #timeBtn{
+        color: black;
+        border: 1px solid black;
+
+    }
+
+    #input-date {
+        background-color: rgb(232, 232, 232);
+        color: black;
+    }
 
     .container::before{
         content: '';
